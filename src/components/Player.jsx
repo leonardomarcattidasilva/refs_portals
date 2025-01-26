@@ -6,7 +6,7 @@ const Player = () => {
    const handleClick = () => setPlayerName(nameRef.current.value.trim())
 
    return <section id="player">
-      <h2>Welcome {playerName ? playerName : 'Unknown Player'}</h2>
+      <h2>Welcome {playerName ?? 'Unknown Player'}</h2>
       <p>
          <input type="text" ref={nameRef} />
          <button type="button" onClick={handleClick}>Set Name</button>
